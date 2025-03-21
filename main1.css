@@ -1,0 +1,33 @@
+.maincontainer{
+    display: flex;
+    justify-content: space-between;
+}
+
+.container{
+    border: 2px solid black;
+    display: flow-root;
+  background-color: aqua;
+  right:10px;
+}
+
+.box1{
+  float: right;
+  border: 2px solid rgb(168, 8, 8);
+  width: 100px;
+  background-color: rgb(88, 88, 234);
+}
+
+.box2{
+    position: sticky;
+    top:10px;
+    width: 200px;
+    background-color: rgb(164, 101, 48);
+}
+
+
+.box2{
+    position: fixed;
+    top:10px;
+    width: 200px;
+    background-color: rgb(164, 101, 48);
+}

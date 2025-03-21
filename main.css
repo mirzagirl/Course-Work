@@ -1,0 +1,169 @@
+/* Priority Basis */
+body{
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #f0f4f8;
+  font-family: sans-serif;
+}
+#myid {
+  border: 4px solid palegoldenrod ;
+}
+
+#menu ul li {
+  display: inline-block; /* Align horizontally */
+  padding: 10px; /* Add spacing between items */
+}
+
+input{
+  border: 2px solid purple;
+}
+
+.class-name {
+    color: aqua;
+}
+
+.container{
+  position: relative;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #f0f4f8;
+  font-family: sans-serif;
+}
+
+.container {
+  width: 300px;
+  height: 200px;
+  background-color: #f0f4f8;
+  border: 2px dashed #bbb;
+  margin: 50px auto;
+  padding: 10px;
+}
+
+.box {
+  width: 100px;
+  height: 100px;
+  background-color: #3498db;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  /* Key part: relative positioning */
+  position: relative;
+  top: 30px;  /* Moves the box down 30px from its original position */
+  left: 50px; /* Moves the box right 50px from its original position */
+}
+
+
+/* .box {
+  width: 150px;
+  height: 150px;
+  padding: 10px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  border-radius: 10px;
+} */
+
+.box-1 {
+  background-color: #3498db;
+  position: relative; /* reference point for overlap */
+  z-index: 1;
+  overflow: auto;
+  overflow: hidden;
+    width: 100px;
+    height: 100px;
+    background-color: tomato;
+    animation: bounce 2s infinite;
+  
+}
+
+.box-3 {
+  display: inline-block;
+  background-color: #3498db;
+  overflow: scroll;
+  height: 100px;
+  width: 100px;
+  animation-name: changeColor1;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+
+  animation-timing-function: ease-in-out;
+
+}
+@keyframes changeColor1 {
+  0%   { background-color: red; }
+  25%  { background-color: orange; }
+  50%  { background-color: yellow; }
+  75%  { background-color: green; }
+  100% { background-color: blue; }
+}
+.box-1 {
+  width: 100px;
+  height: 100px;
+  background-color: #3498db;
+  position: relative; /* reference point for overlap */
+  z-index: 1;
+  overflow: auto;
+  animation-name: fadeIn;
+  animation-duration: 5s;
+  /* animation-iteration-count: infinite; */
+  animation-direction: alternate;
+  animation-timing-function: ease-in-out;
+  animation: spin 1s linear 2s infinite;
+}
+
+/* animation: animation-name animation-duration animation-timing-function animation-delay animation-iteration-count animation-direction animation-fill-mode animation-play-state; */
+
+/* .box {
+  animation: moveBox 3s linear 2s infinite alternate forwards running;
+}
+ */
+@keyframes spin {
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  95% { transform: translateY(5px); }
+  90% { transform: translateY(10px); }
+  50% { transform: translateY(-100px); }
+}
+@keyframes fadeIn {
+  0% { opacity: 1; }
+  25% {opacity: 0.8;}
+  50% {opacity: 0.6;}
+  75% {opacity: 0.4;}
+  100% {opacity: 0;}
+}
+
+@keyframes moveBox {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(200px);
+  }
+}
+
+
+.box-2 {
+  background-color: #e74c3c;
+  position: absolute; /* enables overlap */
+  top: 50px; /* adjust for vertical overlap */
+  left: 50px; /* adjust for horizontal overlap */
+  z-index: 2; /* ensures this box is on top */
+}

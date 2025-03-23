@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <header></header>
+    <aside></aside>
+    <section>
+        <div class="container">
+            <form class="formstyle" method="post" action="/">
+                <label for="email">Email:</label>
+                <input placeholder="type.." type="email" id="email" required  autocomplete="off"/>
+                <label for="name">Name:</label>
+                <input placeholder="type.." type="text"  id="name" />
+                <label  for="password">Password:</label>
+                <input placeholder="type.." type="password" id="password" />
+                <label for="dob">Date of Birth:</label>
+                <input placeholder="type.." type="date" id="dob" />
+                <label for="country">Country</label>
+                <select id="country" list="countryList" >
+                    <datalist id="countryList">
+                    <option>India</option>
+                    <option>America</option>
+                    <option>China</option>
+                    <option>Japan</option>
+                </datalist></select>
+                <label for="resume">Your Resume:</label>
+                <input placeholder="type.." type="file" name="resume" id="resume" />
+                <button type="submit">Submit</button>
+            </form>
+          </div>
+    </section>
+    <footer></footer>
+</body>
+</html>

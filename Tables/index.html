@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Transition vs Animation</title>
+  <style>
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-family: Arial, sans-serif;
+    }
+    th, td {
+      border: 1px solid #ddd;
+      padding: 10px;
+      text-align: left;
+    }
+    th {
+      background-color: #f2f2f2;
+    }
+    .example-box {
+      width: 40px;
+      height: 40px;
+      background-color: #4caf50;
+      margin: 10px 0;
+    }
+
+    /* Transition Example */
+    .transition-box {
+      transition: transform 0.5s ease, background-color 0.5s ease;
+    }
+    .transition-box:hover {
+      transform: rotate(45deg);
+      background-color: #45a049;
+    }
+
+    /* Animation Example */
+    .animation-box {
+      animation: spin 2s linear infinite;
+    }
+    @keyframes spin {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+  </style>
+</head>
+<body>
+  <table>
+    <thead>
+      <tr>
+        <th>Property</th>
+        <th>Definition</th>
+        <th>Example Usage</th>
+        <th>Visual Example</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Transition</strong></td>
+        <td>Applies smooth transitions when CSS properties change states (e.g., on hover).</td>
+        <td>
+          <code>transition: transform 0.5s ease;</code><br>
+          <code>:hover { transform: rotate(45deg); }</code>
+        </td>
+        <td>
+          <div class="example-box transition-box"></div>
+          <small>(Hover the box)</small>
+        </td>
+      </tr>
+      <tr>
+        <td><strong>Animation</strong></td>
+        <td>Executes predefined keyframe animations automatically or triggered by events.</td>
+        <td>
+          <code>animation: spin 2s linear infinite;</code><br>
+          <code>@keyframes spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }</code>
+        </td>
+        <td>
+          <div class="example-box animation-box"></div>
+          <small>(Continuous animation)</small>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</body>
+</html>

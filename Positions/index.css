@@ -1,0 +1,86 @@
+body {
+  margin: 100px auto;
+}
+
+.parent {
+  width: 500px;
+  border: 1px solid red;
+  margin: auto;
+  text-align: center;
+}
+
+.child {
+  border-radius: 10%;
+  width: 100px;
+  height: 100px;
+  margin: 20px;
+}
+
+.one {
+  background-color: powderblue;
+  right: 10px; 
+  /* applied it didn't have effect so postion relative or absolute */
+  position: relative;
+  /* position: relative; changes the position of the element 
+  relative to the parent element and relative to itself 
+  and where it would usually be in the regular document
+   flow of the page. This means that it's relative to its original position within the parent element. */
+
+  
+}
+
+
+.two {
+  background-color: royalblue;
+}
+ /* next step 2 */
+ .one {
+    background-color: powderblue;
+    position: relative;
+    top: 150px;
+    /* elements that are relatively positioned can move around while still remaining in the regular document flow.
+
+They also do not affect the layout of the surrounding elements */
+  }
+  .one{
+    position: absolute;
+    top:0px;
+    /* Absolute-positioned elements are completely taken out of the regular flow of the web page.
+
+They are not positioned based on their usual place in the document flow, but based on the position of their ancestor.
+
+In the example above, the absolutely positioned square is inside a statically positioned parent.
+
+This means it will be positioned relative to the whole page itself, which means relative to the <html> element – the root of the page. */
+  }
+
+  /* next Absolute positioning takes elements out of the regular document flow while also affecting the layout of the other elements on the page. */
+
+  .parent {
+    width: 500px;
+    border: 1px solid red;
+    margin: auto;
+    text-align: center;
+    position: relative;
+  }
+  
+  .one {
+    background-color: powderblue;
+    position: absolute;
+    top: 50px;
+    left: 0;
+  }
+  
+  .two {
+    background-color: royalblue;
+    position: relative;
+    bottom: 120px;
+  }
+
+.three {
+  background-color: sienna;
+}
+
+.four {
+  background-color: slateblue;
+}

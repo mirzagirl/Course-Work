@@ -1,0 +1,97 @@
+/* body{
+    padding: 10px;
+    margin: 10px;
+}
+.container{
+    height: auto;
+    width: 500px;
+    border: 2px solid black;
+    padding: 5px;
+}
+input{
+    width:100px;
+}
+.form-fields{
+    display: flex;
+    flex-direction: column;
+}
+input:nth-of-type(even){
+    color: rgb(18, 49, 76);
+    background-color: brown;
+    align-self: end;
+}
+label:nth-of-type(even){
+    color: rgb(18, 49, 76);
+    background-color: brown;
+    align-self: end;
+}
+select{
+    align-self: end;
+    width: 20%;
+}
+#checkbox{
+    justify-self: start;
+}
+button{
+ align-self: center;
+} */
+
+.out-box{
+    height: 500px;
+    width: 100%;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column-reverse;
+    div:nth-child(odd) {
+        background-color: #c54949;
+      };
+    div:nth-child(even) {
+        background-color: #ccc;
+      }
+}
+div:nth-child(3n) {
+    color: red;
+  }
+
+  /* :nth-child() counts all siblings, not just ones of a specific tag.
+
+So div:nth-child(2) means the second element among siblings, even if it's not a div.
+
+ */
+  
+  /* 2nd, 5th, 8th, ... */
+  div:nth-child(3n-1) {
+    color: blue;
+  }
+  p:first-child {
+    font-weight: bold;
+  }
+  
+  p:last-child {
+    color: red;
+  }
+  div:only-child {
+    background: yellow;
+  }
+    
+.box{
+    align-self: start;
+    justify-self: center;
+}
+
+li:nth-child(odd){
+    background-color: red;   /* selects 2nd child overall: <li>Two</li> */
+}
+li:nth-of-type(2) { color: green; }  
+   /* selects 2nd <li>: <li>Three</li> */
+
+   /* :nth-child(n)	Nth child regardless of tag
+:nth-of-type(n)	Nth element of that tag only
+:first-child	First child (any tag)
+:last-child	Last child (any tag)
+:only-child	Only one child (any tag) */
+
+
+
+
+

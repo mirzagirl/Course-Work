@@ -67,7 +67,7 @@ const obj = {
   obj.f()() 
   ;(obj.f())() 
   obj.f().call({a:2}) 
-  e: (function() { return () => { console.log(this.a); } })(),
+  // e: (function() { return () => { console.log(this.a); } })(),
 
 // why obj.e() console logs 'undefined'?
 
@@ -102,3 +102,5 @@ const obj = {
 // 1
 // 1
 // 1
+
+

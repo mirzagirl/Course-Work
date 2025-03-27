@@ -1,4 +1,17 @@
+const user = {
+  name: "Bob",
+  greet: function() {
+    console.log("Hello, " + this.name);
+  }
+};
 
+setTimeout(user.greet, 1000); 
+// Output: Hello, undefined (or error in strict mode)
+setTimeout(user.greet, 1000)
+
+setTimeout(function() {
+  user.greet.apply(user);
+}, 1000);
 // Question 1:
 
 // Read Copy 

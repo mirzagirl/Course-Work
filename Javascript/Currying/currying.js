@@ -21,7 +21,7 @@ const curry = (fn) => {
   console.log(curriedSum(1)(2, 3));  // 6
   console.log(curriedSum(1, 2, 3));
 
-  const curry = (fn) => {
+  const curry1 = (fn) => {
     return function curried(...args) {
       if (args.length == fn.length) {
         return fn(...args);
@@ -37,9 +37,9 @@ const curry = (fn) => {
     return a + b + c;
   }
   
-  // const curriedSum = curry(sum);
+  const curriedSum1 = curry1(sum);
   
-  console.log(curriedSum(1)(2)(3));  // 6
-  console.log(curriedSum(1, 2)(3));  // 6
-  console.log(curriedSum(1)(2, 3));  // 6
-  console.log(curriedSum(1, 2, 3));
+  console.log(curriedSum1(1)(2)(3));  // 6
+  console.log(curriedSum(11, 2)(3));  // 6
+  console.log(curriedSum1(1)(2, 3));  // 6
+  console.log(curriedSum1(1, 2, 3));

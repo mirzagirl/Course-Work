@@ -1,0 +1,1 @@
+Array.from({ length: 3 }, (_, i) => i); // [0, 1, 2]

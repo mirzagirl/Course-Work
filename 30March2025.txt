@@ -1,0 +1,7 @@
+Promises [four type examples]
+try catch
+fetch 
+real api
+
+practice 
+event loop 

@@ -6,7 +6,13 @@ grid-template-columns: 1fr 3fr 3fr; /* Define column proportions */
 grid-template-rows: auto 1fr auto; 
 height: 100vh;
 }
-
+@media (max-width: 768px) {
+    .container{
+        grid-template-areas: "header" "section" "aside" "footer";
+        grid-template-columns: 1fr;
+        grid-template-rows: auto 1fr auto auto;
+    }
+}
 header{
     grid-area: header;
     padding: 2px;

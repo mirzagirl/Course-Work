@@ -148,3 +148,43 @@ const init = once(() => console.log("Initialized!"));
 
 init(); // Initialized!
 init(); // nothing
+
+// ## Equality in JavaScript
+
+// 1. `==` (Abstract Equality)
+// - Performs type coercion if the types are different.
+// - Example:
+console.log(5 == "5"); // true (string "5" is coerced to number 5)
+
+// 2. `===` (Strict Equality)
+// - Does not perform type coercion; checks both value and type.
+// - Example:
+console.log(5 === "5"); // false (different types: number vs string)
+
+// 3. `Object.is()`
+// - Similar to `===` but handles special cases like `NaN` and `-0`.
+// - Examples:
+console.log(Object.is(NaN, NaN)); // true (unlike `===`, which returns false)
+console.log(Object.is(-0, 0)); // false (distinguishes between -0 and 0)
+
+// 4. `null` and `undefined`
+// - `null == undefined` is true (abstract equality).
+// - `null === undefined` is false (strict equality).
+console.log(null == undefined); // true
+console.log(null === undefined); // false
+
+// 5. Comparing Objects
+// - Objects are compared by reference, not by value.
+// - Example:
+const obj1 = { a: 1 };
+const obj2 = { a: 1 };
+console.log(obj1 == obj2); // false (different references)
+console.log(obj1 === obj2); // false (different references)
+console.log(obj1 === obj1); // true (same reference)
+
+// 6. Special Cases
+// - `NaN` is not equal to itself with `==` or `===`.
+console.log(NaN == NaN); // false
+console.log(NaN === NaN); // false
+// - Use `Number.isNaN()` to check for `NaN`.
+console.log(Number.isNaN(NaN)); // true

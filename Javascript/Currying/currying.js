@@ -43,3 +43,31 @@ const curry = (fn) => {
   console.log(curriedSum(11, 2)(3));  // 6
   console.log(curriedSum1(1)(2, 3));  // 6
   console.log(curriedSum1(1, 2, 3));
+
+
+  function curried(func){
+    return function innerCurry(...args){
+        console.log(args)
+        if(func.length<=args.length){
+            return func(...args);
+        }else{
+            return function(...params){
+                
+                // console.log(args,params)
+               return  innerCurry(...args,...params);
+            } 
+        }
+    }
+}
+
+function sum(a,b,c){
+    return a+b+c+"brak";
+}
+
+// let curry = curried(sum)
+
+
+console.log(curry(1,2,3))
+console.log(curry(1)(2)(3))
+console.log(curry(1)(2,3))
+console.log(curry(1,2)(3))

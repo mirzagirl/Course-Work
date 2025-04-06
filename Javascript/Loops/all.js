@@ -8,7 +8,11 @@ const arr = [1, 2, 3];
 arr.forEach(num => {
     console.log(num); // Logs: 1, 2, 3
 });
-
+// Feature	map()	forEach()
+// Returns	New transformed array	undefined
+// Mutates original	No	No
+// Use case	Data transformation	Side effects (e.g., logging)
+// Chainable	✅ Yes	❌ No
 // 2. for...in
 // - Iterates over the enumerable properties (keys) of an object.
 // - Works on objects and arrays but is primarily used for objects.

@@ -1,5 +1,5 @@
 // Comparing two empty objects
-console.log({} === {}); // false - Different object references
+// console.log({} === {}); // false - Different object references
 console.log({} == {});  // false - Different object references
 
 // Comparing two variables pointing to the same object

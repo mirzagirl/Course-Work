@@ -8,7 +8,7 @@ const obj1 = {
     },
   };
   
-  obj1.printDelayed();
+  obj1.printDelayed(); // answer: GPT
   
   // Question 2:
   const obj2 = {
